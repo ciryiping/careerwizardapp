@@ -44,14 +44,30 @@
         <p>A tool for analyzing career paths from public Linkedin profiles.</p>
 
   </div>
-
+	<!--
     <form class="navbar-form text-center" > <!--  action="/result" method="GET" -->
     Enter your current position:
     <input type="text"   placeholder="e.g. Software Engineer">
     <button  class="btn btn-primary" id="puppymaker">show career flow network</button>
-    </form>
+    </form> -->
+    <div class="row">		
+					<div id="menu_list" class="col-sm-9">
+			    		<select id="title_start" class="btn btn-primary form-control input-lg">
+		  					<option selected="selected">STATISTICIAN</option>
+		  					<option>SENIOR STATISTICIAN</option>
+		  					<option>SAS PROGRAMMER</option>
+		  					<option>DIRECTOR</option>
+		  					<option>TBD</option>
+						</select>
+		  			</div>
+		  			<div class="col-sm-3">
+		  				<button id="submit" type="button" class="btn btn-primary btn-block input-lg">Submit</button>
+					</div>
+				</div>
+		  			
     <div id="network">
           <p>networks go here.</p>
+           <img class="img-responsive img-centered" src="../static/img/results/Core3_low.jpg" alt="">
       </div>
      <form class="navbar-form text-center" > <!-- action="/result" method="GET" -->
     Enter your desired job:
@@ -62,6 +78,7 @@
     </form>
 	<div id="path">
           <p>Paths go here.</p>
+          <img class="img-responsive img-centered" src="../static/img/results/path_stat.jpg" alt="">
           </div>
   </div>
   
@@ -73,7 +90,8 @@
     <script src="static/js/bootstrap.min.js"></script>
      <script>
         var add_network_to_box = function() {
-        	 window.open("http://www.weitz.com/wp-content/uploads/2012/08/Career-Path-Diagram_Big.jpg");
+        	 window.open("/Users/jing/Dropbox/insightdata/networkbuilding/careerpath/app/static/img/results/Core3_low.jpg");
+        	 //http://www.weitz.com/wp-content/uploads/2012/08/Career-Path-Diagram_Big.jpg
         
         }
          var add_path_to_box = function() {
@@ -87,6 +105,23 @@
         	
             $('#puppymaker').click(add_network_to_box);
             $('#querymaker').click(add_path_to_box);
+             $('#submit').click(function(e){
+		entries = {};
+ 
+		var title_start_dropdown = document.getElementById('title_start');
+		entries['title_start'] = title_start_dropdown.value;
+		 
+	 
+		$( "#path" ).append("<select id="title_end" class="btn btn-primary form-control input-lg">
+		  					<option selected="selected">STATISTICIAN</option>
+		  					<option>SENIOR STATISTICIAN</option>
+		  					<option>SAS PROGRAMMER</option>
+		  					<option>DIRECTOR</option>
+		  					<option>TBD</option>
+						</select>");
+		  		
+		return 0;
+	});
             }
         )
     </script>

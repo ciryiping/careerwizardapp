@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Career Path Recommendation</title>
+    <title>Career Wizard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Career Path Recommendation</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Career  Wizard</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,25 +81,65 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To My Recommendation System</div>
+                <div class="intro-lead-in">Welcome To Career Wizard: Your Career Path Recommender</div>
                 <div class="intro-heading">Please Select Your Current Position</div>
                 <!--<a href="#services" class="page-scroll btn btn-xl">Tell Me More</a> -->
                 <ul class="nav nav-pills">
-
-             	<li class="dropdown">
-                	<a class="dropdown-toggle" id="choose-model" data-toggle="dropdown" href="#"><span id="dropdown_title">Select a current position</span><span class="caret"></span></a>
-                 	<ul id="select-car" class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                  		<li role="presentation"><a class="model" role="menuitem" tabindex="-1" value="STATISTICIAN href="javascript:void(0);">STATISTICIAN</a></li>
-                   		<li role="presentation"><a class="model" role="menuitem" tabindex="-1" value="civic" href="javascript:void(0);">Not ready</a></li>
-                   		<li role="presentation"><a class="model" role="menuitem" tabindex="-1" value="camry" href="javascript:void(0)">Not ready</a></li>
-                   		<li role="presentation"><a class="model" role="menuitem" tabindex="-1" value="corolla" href="javascript:void(0)">Not ready</a></li>
-                 	</ul>
-              </li>
+				<div class="row">		
+					<div id="menu_list" class="col-sm-9">
+			    		<select id="title_start" class="btn btn-primary form-control input-lg">
+		  					<option selected="selected">STATISTICIAN</option>
+		  					<option>SENIOR STATISTICIAN</option>
+		  					<option>SAS PROGRAMMER</option>
+		  					<option>DIRECTOR</option>
+		  					<option>TBD</option>
+						</select>
+		  			</div>
+		  			<div class="col-sm-3">
+		  				<button id="submit" type="button" class="btn btn-primary btn-block input-lg">Submit</button>
+					</div>
+				</div>
+				
+				
               </ul>
             </div>
         </div>
     </header>
-
+    
+    <div data-role="page">
+  <div data-role="header">
+  <h1>Select Menus</h1>
+  </div>
+      <div data-role="main" class="ui-content">
+    	<form method="post" action="demoform.asp">
+     	 <fieldset class="ui-field-contain">
+        	<label for="day">Select a current position</label>
+        	<select name="day" id="day">
+          		<optgroup label="statistics">
+            		<option value="mon">Statistician</option>
+            		<option value="tue">Sr. Statistician</option>
+            		<option value="wed">aa</option>
+            		<option value="thu">bb</option>
+            		<option value="fri">cc</option>
+          		</optgroup>
+          		<optgroup label="Computer science">
+            		<option value="sat">Saturday</option>
+            		<option value="sun">Sunday</option>
+          		</optgroup>
+        	</select>
+     		</fieldset>
+     			 <button id="cur_position" type="submit" data-inline="true" value="Submit">
+    		</form>
+  		</div>
+	</div>
+			
+	<!--			
+     <div id="network">
+          <p>networks go here.</p>
+            <img class="img-responsive img-centered" src="../static/img/results/Core3_low.jpg" alt="">
+            <img class="img-responsive img-centered" src="../static/img/results/path_stat.jpg" alt="">
+      </div> -->
+    <!--
     <!-- Services Section -->
     <section id="services">
         <div class="container">
@@ -315,7 +355,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>   -->
 
     <!-- Team Section -->
     <section id="team" class="bg-light-gray">
@@ -380,7 +420,8 @@
             </div>
         </div>
     </section>
-
+	
+	<!--
     <!-- Clients Aside -->
     <aside class="clients">
         <div class="container">
@@ -479,7 +520,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>  
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
@@ -650,9 +691,10 @@
             </div>
         </div>
     </div>
+    -->
     
 <!-- popup window at the beginning -->    
-
+<!--
     <div class="modal fade" data-keyboard="true" tabindex="-1" id="AdModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -672,19 +714,19 @@
       <div class="modal-dialog modal-small">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Welcome to DealSpotter</h4>
+            <h4 class="modal-title">Welcome to Careerpath</h4>
           </div>
           <div class="modal-body">
-            <p align="center">Find good car deals in the Bay Area.</p><p align="center">Postings were last updated on 10/12/2013.</p>
+            <p align="center">Select your current position.</p><p align="center">More selections are coming soon.</p>
             <div class="span12 centered-pills">
               <ul class="nav nav-pills">
                 <li class="dropdown">
                   <a class="dropdown-toggle" id="choose-model" role="button" data-toggle="dropdown" href="#">Select a model<b class="caret"></b></a>
                   <ul id="select-car" class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                    <li role="presentation"><a class="splash-model" role="menuitem" tabindex="-1" value="accord" href="javascript:void(0);">Honda Accord</a></li>
-                    <li role="presentation"><a class="splash-model" role="menuitem" tabindex="-1" value="civic" href="javascript:void(0);">Honda Civic</a></li>
-                    <li role="presentation"><a class="splash-model" role="menuitem" tabindex="-1" value="camry" href="javascript:void(0)">Toyota Camry</a></li>
-                    <li role="presentation"><a class="splash-model" role="menuitem" tabindex="-1" value="corolla" href="javascript:void(0)">Toyota Corolla</a></li>
+                    <li role="presentation"><a class="splash-model" role="menuitem" tabindex="-1" value="accord" href="javascript:void(0);">STATISTICIAN</a></li>
+                    <li role="presentation"><a class="splash-model" role="menuitem" tabindex="-1" value="civic" href="javascript:void(0);">SAS PROGRAMMER</a></li>
+                    <li role="presentation"><a class="splash-model" role="menuitem" tabindex="-1" value="camry" href="javascript:void(0)">not ready</a></li>
+                    <li role="presentation"><a class="splash-model" role="menuitem" tabindex="-1" value="corolla" href="javascript:void(0)">not ready</a></li>
                   </ul>
                 </li>
               </ul>
@@ -693,7 +735,7 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
+ -->
     <!-- jQuery Version 1.11.0 -->
     <script src="../static/js/jquery-1.11.0.js"></script>
 
@@ -708,10 +750,30 @@
     <!-- Contact Form JavaScript -->
     <script src="../static/js/jqBootstrapValidation.js"></script>
     <script src="../static/js/contact_me.js"></script>
+     <!-- Custom Theme JavaScript -->
+    
+   <!--  <script src="../static/js/agency.js"></script> -->
+	<script type="text/javascript">
 
-    <!-- Custom Theme JavaScript -->
-    <script src="../static/js/agency.js"></script>
-
+   
+    $('#submit').click(function(e){
+		entries = {};
+ 
+		var title_start_dropdown = document.getElementById('title_start');
+		entries['title_start'] = title_start_dropdown.value;
+		 
+		<!--window.location.href = '/results/' + encodeURIComponent(JSON.stringify(entries));-->
+		$( "#menu_list" ).append("<select id="title_end" class="btn btn-primary form-control input-lg">
+		  					<option selected="selected">STATISTICIAN</option>
+		  					<option>SENIOR STATISTICIAN</option>
+		  					<option>SAS PROGRAMMER</option>
+		  					<option>DIRECTOR</option>
+		  					<option>TBD</option>
+						</select>");
+		  		
+		return 0;
+	});
+	</script>
 </body>
 
 </html>
