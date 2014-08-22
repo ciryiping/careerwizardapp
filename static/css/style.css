@@ -1,0 +1,88 @@
+/*/* Your CSS Styling */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html,
+body {
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+body {
+	background: url("/static/images/background.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/* Genericon social icon styles
+---------------------------------------------------- */
+.grid_image {
+	height: 80px;
+	width: 80px;
+	/*min-width: 100px;*/
+	background-color: rgba(245, 245, 245, 0.75);
+	padding: 5px;
+}
+
+.grid_image_label {
+	text-align:center;
+	font-size: 16px;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin-bottom: 5px;
+	color: #444444;
+}
+
+.grid_image:hover { 
+  outline: 5px solid #31708f; 
+  transition-delay:0s;
+} 
+
+.well {
+   background-color: rgba(245, 245, 245, 0.75);
+}
+
+#ListWrapper {
+	font-family: Helvetica, sans-serif;
+	font-size: 24px;
+	line-height:200%;
+}
+
+.usererror {
+	background-color: rgba(245, 245, 245, 0.75);
+	padding: 10px;
+}
+
+#location_results {
+	background-color: rgba(245, 245, 245, 0.9);
+	padding: 5px 0px 0px 5px;
+	height: 713px;
+}
+
+#map-canvas {
+    height: 713px;
+    width:  100%;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+  }
+
+.dest_table_font {
+	font-family: Helvetica, sans-serif;font-size: 19px;
+}
+
+.map_label_font {
+	font-family: Arial, sans-serif;font-size: 18px;
+	overflow: hidden; 
+	white-space: nowrap;
+}
+
+#travel_info {
+	font-weight: bold;
+}
+
+#desintationEntry {
+	font-size: 18px;
+}
