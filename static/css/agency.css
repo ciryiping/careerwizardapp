@@ -26,14 +26,14 @@ div.nodeblock {
     border-radius: 5px;
     text-align: center;
     font-family: Verdana, Arial, Sans-Serif;
-    opacity: 0.8;
+    opacity: 0.6;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 5px;
     
 }
 h4.nodeinpath {
-	height:30px;
+	height:60px;
     width:800px;
     display: inline-block;
     background-color:#000000;
@@ -41,7 +41,9 @@ h4.nodeinpath {
     border-radius: 5px;
     text-align: center;
     font-family: Verdana, Arial, Sans-Serif;
-    opacity: 0.8;
+    opacity: 0.6;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 5px;
 }
 div.bigmargin{
@@ -108,7 +110,7 @@ h6 {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
-    background-color: #fed136;
+    background-color: #0404B4; /*#fed136;*/
 }
 
 .btn-primary:hover,
@@ -116,9 +118,9 @@ h6 {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    border-color: #f6bf01;
+    border-color:  #f6bf01; 
     color: #fff;
-    background-color: #fec503;
+    background-color:#013ADF; /* #fec503;*/
 }
 
 .btn-primary:active,

@@ -34,7 +34,7 @@
 
 </head>
 
-<body id="page-top" class="index" background="../static/img/careers.jpg">
+<body id="page-top" class="index" background="../static/img/background.jpg">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -61,16 +61,21 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="explode" href="http://www.google.com">Slides</a>
                     </li>  -->
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#anchorforsubmit">Start</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
+                        <a class="page-scroll" href="#team">About me</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                    	<a href="http://www.slideshare.net/slideshow/embed_code/38316033" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">Slides</a>
                     </li>
+                    <li>
+                    	<a href="http://users.stat.umn.edu/~yuan0076/CareerWizard.pptx" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">PPT</a>
+                    </li>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -89,10 +94,13 @@
       </div> 
     </header>
     
+    <div   class = "smallmargin"></div>
+    
+    
     <div data-role="page">
     
     <div class="container"   style="background-color:rgba(255, 255, 255, 0);">
-      <div class="well"  style="background-color:rgba(255, 255, 255, 0.7);">
+      <div class="well"  style="background-color:rgba(255, 255, 255, 0.4);">
 		<div class="row" >
 			<!-- starting the left column -->
             <div class="col-sm-5">
@@ -105,7 +113,7 @@
 				<div id="menu_list" class="row">		
 					<div  class="col-sm-8">
 			    		<div id="the-basics">
-  						<input class="typeahead" id="positioninput" type="text" placeholder="STATISTICIAN">
+  						<input class="typeahead" id="positioninput" type="text" value ="STATISTICIAN" style="text-transform: uppercase;" placeholder="STATISTICIAN">
 					</div>
 			    		<!--<select id="title_start" class="btn btn-primary form-control input-lg">
 		  					<option selected="selected">STATISTICIAN</option>
@@ -136,13 +144,14 @@
 				</div>
 				<div class = "smallmargin"></div>
 				<div class="row">
+					<div class="col-sm-6">
+		  				<button id="shortestpath" type="button" class="btn btn-primary btn-block input-lg">Shortest Path</button>
+					</div>
 					<div  class="col-sm-6">
 						<button id="fastestpath" type="button" class="btn btn-primary btn-block input-lg">Fastest Path</button>
 	
 		  			</div>
-		  			<div class="col-sm-6">
-		  				<button id="shortestpath" type="button" class="btn btn-primary btn-block input-lg">Shortest Path</button>
-					</div>
+		  			
 					
 					
 				</div>
@@ -153,7 +162,7 @@
             </div>
             <!--  right block   -->
              <div  class="col-sm-7"  >
-             <h3> Your next job title could be: </h3>
+              <h4 id="next_sentence" style="display: none"> Your next job form <b id="title_at_the_moment"></b>: </h4>
              <div id="anchorfordata"> </div>
              
              <!-- end right block   -->
@@ -220,13 +229,51 @@
   <h4> one out of 616 could achieve this path </h4> 
    -->
   </div>
-    
+    <div   class = "bigmargin"></div> 
     </div>
     
-			
+  <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About me</h2>
+                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="../static/img/team/yiping.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Yiping Yuan</h4>
+                        <p class="text-muted">Doing Data Science</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-user"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted"></p>  <!-- Description here. -->
+                </div>
+            </div>
+        </div>
+    </section		
 	
    
-  
+<!--  <iframe src="//www.slideshare.net/slideshow/embed_code/38303994" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> -->
 	
 	 
     
@@ -275,31 +322,7 @@
   };
 };
  
-var states = ['ADMINISTRATIVE ASSISTANT', 'ASSOCIATE SCIENTIST', 'CHIEF ARCHITECT', 'BIOSTATISTICIAN II',
- 'ADJUNCT FACULTY', 'UNDERGRADUATE RESEARCH ASSISTANT', 'CHIEF DATA SCIENTIST', 'CHIEF SCIENTIST', 'STATISTICIAN II',
-  'GRADUATE STUDENT', 'TUTOR', 'CTO', 'MEMBER', 'STATISTICAL ANALYST', 'HEAD', 'SENIOR BUSINESS ANALYST', 'STATISTICAL SCIENTIST', 
-  'SENIOR RESEARCH SCIENTIST', 'SENIOR PROGRAMMER', 'SENIOR DATA ANALYST', 'CONSULTANT STATISTICIAN', 
-  'RESEARCH ASSISTANT PROFESSOR', 'INDEPENDENT CONSULTANT', 'ENGINEERING INTERN', 'SENIOR SAS PROGRAMMER', 'PRODUCT MANAGER', 
-  'DEPUTY DIRECTOR', 'SYSTEMS ENGINEER', 'PRINCIPAL BIOSTATISTICIAN', 'ASSOCIATE PROFESSOR', 'SUMMER INTERN', 'SENIOR STATISTICAL ANALYST', 
-  'COFOUNDER', 'BUSINESS SYSTEMS ANALYST', 'STATISTICAL PROGRAMMING CONSULTANT', 'SENIOR STATISTICIAN II', 'VICE PRESIDENT', 'SENIOR DATA SCIENTIST',
-   'CO', 'ASSISTANT PROFESSOR', 'STATISTICS INTERN', 'RESEARCH SCIENTIST', 'VP', 'STATISTICIAN INTERN', 'SAS PROGRAMMER', 'MEDICAL TECHNOLOGIST', 
-   'SENIOR DEVELOPER', 'POSTDOCTORAL RESEARCH FELLOW', 'ASSOCIATE DIRECTOR', 'VISITING PROFESSOR', 'MARKETING TECHNICAL', 'TECHNICAL LEAD', 'PRINCIPAL STATISTICIAN',
-    'MATHEMATICAL STATISTICIAN', 'TEAM LEAD', 'RESEARCHER', 'ADJUNCT PROFESSOR', 'SENIOR PRINCIPAL STATISTICIAN', 'MANAGING PARTNER', 'PROFESSOR', 'DATA ANALYST',
-     'SENIOR BIOMETRICIAN', 'LEAD STATISTICIAN', 'RESEARCH ANALYST', 'EXECUTIVE ASSISTANT TO CEO', 'LEAD DEVELOPER', 'BIOSTATISTICIAN', 'PRINCIPAL ENGINEER', 
-     'PROJECT STATISTICIAN', 'SENIOR RESEARCH STATISTICIAN', 'SENIOR ENGINEER', 'ADJUNCT ASSISTANT PROFESSOR', 'SENIOR MEMBER', 'PROGRAMMER', 'POSTDOCTORAL FELLOW', 
-     'SENIOR ANALYST', 'RESEARCH FELLOW', 'SURVEY STATISTICIAN', 'MATHEMATICS INSTRUCTOR', 'BOARD', 'CONTRACT STATISTICIAN', 'SENIOR ASSOCIATE', 'PRINCIPAL CONSULTANT', 'TEACHER', 
-     'DIRECTOR BIOSTATISTICS', 'RESEARCH ASSOCIATE', 'GRADUATE STUDENT INSTRUCTOR', 'PROGRAMMER ANALYST', 'BIOMETRICIAN', 'STATISTICAL INTERN', 'OWNER', 'SENIOR DIRECTOR', 'POSTDOCTORAL RESEARCHER', 
-     'PROJECT LEADER', 'PARTNER', 'UNDERGRADUATE RESEARCHER', 'MANAGING DIRECTOR', 'PART', 'PROJECT ENGINEER', 'SENIOR STATISTICAL PROGRAMMER', 'SENIOR RESEARCH ANALYST', 'SVP', 'CHAIRMAN', 'RESEARCH',
-      'TEACHING ASSISTANT', 'DIRECTOR STATISTICS', 'RESEARCH STATISTICIAN', 'ANALYST', 'DOCTORAL STUDENT', 'CHIEF EXECUTIVE OFFICER', 'SAS CONSULTANT', 'STATISTICAL PROGRAMMER', 'QUALITY ENGINEER', 
-      'PROJECT MANAGER', 'GRADUATE TEACHING ASSISTANT', 'SENIOR RESEARCH ASSOCIATE', 'SENIOR MARKETING ANALYST', 'ENGINEER', 'PRESIDENT', 'SENIOR LECTURER', 'VISITING ASSISTANT PROFESSOR', 'EXECUTIVE DIRECTOR', 'ASSOCIATE', 'ECONOMIST',
-       'RESEARCH ASSISTANT', 'WEB DEVELOPER', 'RECRUITER', 'DIRECTOR', 'GLOBAL HEAD', 'ATTORNEY', 'EDITOR', 'CHAIR', 'POST', 'CONSULTANT', 'SCIENTIST', 'SENIOR STATISTICIAN I', 'STATISTICIAN I', 'PROGRAM DIRECTOR', 'SENIOR SYSTEMS ENGINEER',
-        'BUSINESS ANALYST', 'BOARD MEMBER', 'ASSOCIATE PRINCIPAL SCIENTIST', 'SENIOR CONSULTANT', 'FOUNDER', 'STATISTICAL CONSULTANT', 'RESEARCH ENGINEER', 'GRADUATE STUDENT RESEARCHER', 'SENIOR STATISTICIAN', 'FELLOW', 'RESEARCH INTERN', 'SENIOR STATISTICAL SCIENTIST', 
-        'STATISTICAL ANALYSIS MANAGER', 'ASSISTANT DIRECTOR', 'QUANTITATIVE ANALYST', 'SYSTEMS ANALYST', 'INTERN', 'FINANCIAL ANALYST', 'ACTUARIAL ANALYST', 'SENIOR SOFTWARE ENGINEER', 'SENIOR SCIENTIST', 'SOFTWARE DEVELOPER', 
-        'SENIOR STATISTICAL ANALYSIS MANAGER', 'STATISTICIAN', 'PRINCIPAL SCIENTIST', 'GRADUATE RESEARCHER', 'SENIOR BIOSTATISTICIAN',
-         'CHIEF TECHNOLOGY OFFICER', 'SENIOR MANAGER', 'GRADUATE ASSISTANT', 'CEO', 'MANAGER', 'DATA ANALYTICS CONSULTANT', 'LECTURER', 'SENIOR VICE PRESIDENT', 
-        'CHIEF TECHNICAL OFFICER', 'INSTRUCTOR', 'DATA SCIENTIST', 'ADJUNCT INSTRUCTOR', 'SOFTWARE ENGINEER', 'STATISTICS', 'STUDENT', 'GRADUATE RESEARCH ASSISTANT',
-         'PROGRAM MANAGER', 'RISK ANALYST', 'CHIEF', 'CONTRACT EMBEDDED SOFTWARE ENGINEER', 'SUMMER INTERNSHIP',
-         'SOFTWARE ARCHITECT', 'TEAM LEADER', 'CONSULTING STATISTICIAN', 'CIO', 'ADVISOR', 'PRINCIPAL'];
+var states = ['ADMINISTRATIVE ASSISTANT', 'ASSOCIATE SCIENTIST', 'CHIEF ARCHITECT', 'BIOSTATISTICIAN II', 'ADJUNCT FACULTY', 'UNDERGRADUATE RESEARCH ASSISTANT', 'ARCHITECT', 'CHIEF DATA SCIENTIST', 'CHIEF SCIENTIST', 'STATISTICIAN II', 'GRADUATE STUDENT', 'MARKET RESEARCH ANALYST', 'TUTOR', 'CTO', 'MEMBER', 'STATISTICAL ANALYST', 'HEAD', 'SENIOR BUSINESS ANALYST', 'STATISTICAL SCIENTIST', 'SENIOR RESEARCH SCIENTIST', 'SENIOR PROGRAMMER', 'SENIOR DATA ANALYST', 'PRINCIPAL DATA SCIENTIST', 'CONSULTANT STATISTICIAN', 'RESEARCH ASSISTANT PROFESSOR', 'INDEPENDENT CONSULTANT', 'ENGINEERING INTERN', 'SENIOR SAS PROGRAMMER', 'PRODUCT MANAGER', 'DEPUTY DIRECTOR', 'SYSTEMS ENGINEER', 'PRINCIPAL BIOSTATISTICIAN', 'ASSOCIATE PROFESSOR', 'SUMMER INTERN', 'SENIOR STATISTICAL ANALYST', 'COFOUNDER', 'BUSINESS SYSTEMS ANALYST', 'SENIOR RESEARCHER', 'STATISTICAL PROGRAMMING CONSULTANT', 'SPECIALIST', 'SENIOR STATISTICIAN II', 'VICE PRESIDENT', 'SENIOR DATA SCIENTIST', 'ASSISTANT PROFESSOR', 'STATISTICS INTERN', 'RESEARCH SCIENTIST', 'VP', 'STATISTICIAN INTERN', 'SAS PROGRAMMER', 'MEDICAL TECHNOLOGIST', 'SENIOR DEVELOPER', 'POSTDOCTORAL RESEARCH FELLOW', 'SENIOR RESEARCH ASSISTANT', 'ASSOCIATE DIRECTOR', 'VISITING PROFESSOR', 'MARKETING TECHNICAL', 'TECHNICAL LEAD', 'PRINCIPAL STATISTICIAN', 'MATHEMATICAL STATISTICIAN', 'TEAM LEAD', 'RESEARCHER', 'ADJUNCT PROFESSOR', 'SENIOR PRINCIPAL STATISTICIAN', 'MANAGING PARTNER', 'PROFESSOR', 'DATA ANALYST', 'SENIOR BIOMETRICIAN', 'LEAD STATISTICIAN', 'COMPUTER SCIENTIST', 'RESEARCH ANALYST', 'EXECUTIVE ASSISTANT TO CEO', 'LEAD DEVELOPER', 'BIOSTATISTICIAN', 'PRINCIPAL ENGINEER', 'PROJECT STATISTICIAN', 'SENIOR RESEARCH STATISTICIAN', 'SENIOR ENGINEER', 'ADJUNCT ASSISTANT PROFESSOR', 'DATA ANALYST INTERN', 'LEAD SCIENTIST', 'SENIOR MEMBER', 'PROGRAMMER', 'POSTDOCTORAL FELLOW', 'SENIOR ANALYST', 'DATA SCIENCE CONSULTANT', 'RESEARCH FELLOW', 'SURVEY STATISTICIAN', 'DATA MANAGER', 'MATHEMATICS INSTRUCTOR', 'BOARD', 'POSTDOCTORAL RESEARCH ASSOCIATE', 'CONTRACT STATISTICIAN', 'SENIOR ASSOCIATE', 'LEAD DATA SCIENTIST', 'PRINCIPAL CONSULTANT', 'PARTNER', 'TEACHER', 'DIRECTOR BIOSTATISTICS', 'RESEARCH ASSOCIATE', 'GRADUATE STUDENT INSTRUCTOR', 'PROGRAMMER ANALYST', 'BIOMETRICIAN', 'STATISTICAL INTERN', 'OWNER', 'SENIOR DIRECTOR', 'POSTDOCTORAL RESEARCHER', 'PROJECT LEADER', 'UNDERGRADUATE RESEARCHER', 'MANAGING DIRECTOR', 'PROJECT ENGINEER', 'SENIOR STATISTICAL PROGRAMMER', 'SENIOR RESEARCH ANALYST', 'SVP', 'CHAIRMAN', 'ADVISORY BOARD MEMBER', 'RESEARCH', 'DIRECTOR STATISTICS', 'POSTDOCTORAL SCHOLAR', 'RESEARCH STATISTICIAN', 'ANALYST', 'CHIEF EXECUTIVE OFFICER', 'GLOBAL DIRECTOR', 'SAS CONSULTANT', 'STATISTICAL PROGRAMMER', 'QUALITY ENGINEER', 'PROJECT MANAGER', 'SENIOR RESEARCH ASSOCIATE', 'SENIOR MARKETING ANALYST', 'ENGINEER', 'PRESIDENT', 'SOFTWARE ENGINEER INTERN', 'SENIOR LECTURER', 'VISITING ASSISTANT PROFESSOR', 'EXECUTIVE DIRECTOR', 'TEACHING FELLOW', 'ASSOCIATE', 'ECONOMIST', 'RESEARCH ASSISTANT', 'WEB DEVELOPER', 'RECRUITER', 'DIRECTOR', 'GLOBAL HEAD', 'ATTORNEY', 'EDITOR', 'CHAIR', 'POST', 'CONSULTANT', 'RESEARCH STAFF MEMBER', 'SCIENTIST', 'SENIOR SOFTWARE DEVELOPER', 'PHD STUDENT', 'SENIOR STATISTICIAN I', 'INTERNSHIP', 'STATISTICIAN I', 'PROGRAM DIRECTOR', 'FACULTY', 'CO FOUNDER', 'SENIOR SYSTEMS ENGINEER', 'BUSINESS ANALYST', 'BOARD MEMBER', 'ASSOCIATE PRINCIPAL SCIENTIST', 'SENIOR CONSULTANT', 'FOUNDER', 'STATISTICAL CONSULTANT', 'RESEARCH ENGINEER', 'GRADUATE STUDENT RESEARCHER', 'VISITING SCHOLAR', 'SENIOR STATISTICIAN', 'SOFTWARE ENGINEERING INTERN', 'FELLOW', 'STAFF SCIENTIST', 'TEACHING', 'RESEARCH INTERN', 'SENIOR STATISTICAL SCIENTIST', 'STATISTICAL ANALYSIS MANAGER', 'DEVELOPER', 'ASSISTANT DIRECTOR', 'QUANTITATIVE ANALYST', 'SYSTEMS ANALYST', 'INTERN', 'FINANCIAL ANALYST', 'ACTUARIAL ANALYST', 'SENIOR SOFTWARE ENGINEER', 'SENIOR SCIENTIST', 'SOFTWARE DEVELOPER', 'SENIOR STATISTICAL ANALYSIS MANAGER', 'STATISTICIAN', 'PRINCIPAL SCIENTIST', 'GRADUATE RESEARCHER', 'LEAD RESEARCHER', 'SENIOR BIOSTATISTICIAN', 'VISITING RESEARCHER', 'CHIEF TECHNOLOGY OFFICER', 'SENIOR MANAGER', 'PROJECT COORDINATOR', 'GRADUATE ASSISTANT', 'DATA SCIENTIST INTERN', 'CEO', 'MANAGER', 'DATA ANALYTICS CONSULTANT', 'LECTURER', 'VISITING SCIENTIST', 'MODELING ANALYST', 'SENIOR VICE PRESIDENT', 'CHIEF TECHNICAL OFFICER', 'INSTRUCTOR', 'DATA SCIENTIST', 'ADJUNCT INSTRUCTOR', 'SOFTWARE ENGINEER', 'BUSINESS INTELLIGENCE ANALYST', 'SENIOR RESEARCH ENGINEER', 'PROGRAM MANAGER', 'RISK ANALYST', 'CONTRACT EMBEDDED SOFTWARE ENGINEER', 'SUMMER INTERNSHIP', 'SOFTWARE ARCHITECT', 'TEAM LEADER', 'GRADUATE RESEARCH', 'CONSULTING STATISTICIAN', 'CIO', 'CLINICAL DATA SCIENTIST', 'ADVISOR', 'PRINCIPAL'];
  
  
 $('#the-basics .typeahead').typeahead({
@@ -322,19 +345,23 @@ $('#the-basics .typeahead').typeahead({
 	$(document).ready(function(){
 		$(document).on('mouseenter', '.nodeblock', function(){
     	 $(this).animate({
-          		 height: '+=35px'
+          		 height: '+=35px',
+          		 width: '+=10px'
        		});
        		$(this).find('h5').show();
   		});
   		$(document).on('mouseleave', '.nodeblock', function(){
     	 	$(this).animate({
-           		height: '-=35px'
+           		height: '-=35px',
+           		width: '-=10px'
            	}); 
        		$(this).find('h5').hide();
   		});
 		$(document).on('click', '.nodeblock', function(){
     	 	 var title_start = $('h4', this).text();
+    	 	 title_start = title_start.toUpperCase();
     	 	 console.log(title_start);
+    	 	 $("#title_at_the_moment").html(title_start);
     	 	 $.get("/summary", {title_start : title_start}, function( data ) {
 				// data is response from server
         			$("#anchorfordata").html(data);
@@ -352,16 +379,24 @@ $('#the-basics .typeahead').typeahead({
   		$("#submit").click(function(){
   			//var title_start = $("#title_start").val();
   			var title_start = $("#positioninput").val();
+  			title_start = title_start.toUpperCase();
   			console.log(title_start);
-    		$("#option_none").replaceWith('<option>CEO</option>\
+  			// check if it is in the list
+  			if (states.indexOf(title_start) < 0) {
+    		//do something
+    			alert("Input title not found!");
+    			return 0;
+			}
+    		$("#option_none").replaceWith('<option selected="selected">CEO</option>\
 		  					<option>CTO</option>\
-		  					<option  selected="selected">CHIEF DATA SCIENTIST</option>\
+		  					<option>CHIEF DATA SCIENTIST</option>\
 		  					<option>SENIOR MANAGER</option>\
 		  					<option>EXECUTIVE DIRECTOR</option>\
 		  					<option>PRESIDENT</option>');
 		  	location.href = "#anchorforsubmit";
 		  	
-		  	
+		  	$("#title_at_the_moment").html(title_start);
+		  	$("#next_sentence").show();
 		  	$.get("/summary", {title_start : title_start}, function( data ) {
 				// data is response from server
         			$("#anchorfordata").html(data);
@@ -374,7 +409,9 @@ $('#the-basics .typeahead').typeahead({
   		$("#fastestpath").click(function(){
   		  // var title_start = $("#title_start").val();
   		   var title_start = $("#positioninput").val();
+  		   title_start = title_start.toUpperCase();
             var title_end = $("#title_end").val();
+            
                          
 			console.log(title_start);
 			console.log(title_end);
@@ -387,13 +424,14 @@ $('#the-basics .typeahead').typeahead({
   		
   			
   			
-  			location.href = "#submit2";
+  			location.href = "#fastestpath";
   			//$("#block2").removeClass("hide");
   		});
   		$("#shortestpath").click(function(){
   			
   		  // var title_start = $("#title_start").val();
   		   var title_start = $("#positioninput").val();
+  		   title_start = title_start.toUpperCase();
             var title_end = $("#title_end").val();
                          
 			console.log(title_start);
@@ -407,7 +445,7 @@ $('#the-basics .typeahead').typeahead({
   		
   			 
   			
-  			location.href = "#submit3";
+  			location.href = "#fastestpath";
   			 
 			
   			 
